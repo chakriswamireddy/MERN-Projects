@@ -224,7 +224,7 @@ section > button {
 
 .user-item input[type="checkbox"] {
   position: absolute;
-  right: 10px;
+  right: 20px;
 }
 
 .user-item img {
@@ -242,9 +242,10 @@ section > button {
   background: gray;
   border-radius: 20px;
   padding: 3px 5px;
-  position: absolute;
+  transform: translate(-20px,-10px);
+  /* position: absolute;
   bottom: 10px;
-  right: -5px;
+  right: -5px; */
   color: white;
 
 }
