@@ -25,7 +25,7 @@ function Homepage() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const apiUrl = `https://server10user.onrender.com/api/users?page=${pageNo}&name=${searchedName}&domain=${searchedDomain}&gender=${searchedGender}&available=${searchedAvailable}`;
+    const apiUrl = `https://server11user.onrender.com/api/users?page=${pageNo}&name=${searchedName}&domain=${searchedDomain}&gender=${searchedGender}&available=${searchedAvailable}`;
 
     fetch(apiUrl)
       .then(response => response.json())
