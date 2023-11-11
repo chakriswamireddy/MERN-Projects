@@ -4,7 +4,7 @@ import Users from './Users';
 
 
 
-function PagesSection({ users ,selectTeamClick,setTeamMembers,teamMembers, showTeams,setShowTeams }) {
+function PagesSection({ users ,selectTeamClick,setTeamMembers,teamMembers, showTeams,setShowTeams, setSelectTeamClick, serverUrl }) {
 
 
   const usersLength = users.length
@@ -47,7 +47,7 @@ function PagesSection({ users ,selectTeamClick,setTeamMembers,teamMembers, showT
 
     try {
       
-      const response = await fetch('https://server9user.onrender.com/api/team/', {
+      const response = await fetch(`${serverUrl}/api/team/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,11 +59,12 @@ function PagesSection({ users ,selectTeamClick,setTeamMembers,teamMembers, showT
         throw new Error('Network response was not ok');
       }
 
-      setTeamMembers([])
-      setCheckboxList(falseArray)
+      setTeamMembers([]);
+      setCheckboxList(falseArray);
+      setSelectTeamClick(!selectTeamClick);
     
     } catch (error) {
-      
+      console.error(error)
     }
   };
 
@@ -78,7 +79,7 @@ function PagesSection({ users ,selectTeamClick,setTeamMembers,teamMembers, showT
       <button onClick={()=>setShowTeams(!showTeams) }> {showTeams?'Go Back to Users':"Show Teams"} </button>
       
       {showTeams ? 
-        <Teams />
+        <Teams  serverUrl={serverUrl} />
         :
         <>
         <button onClick={postData}>CreateTeam</button>

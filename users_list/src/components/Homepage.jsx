@@ -24,8 +24,10 @@ function Homepage() {
   const users = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
 
+  const serverUrl = 'https://server12user.onrender.com';
+
   useEffect(() => {
-    const apiUrl = `https://server11user.onrender.com/api/users?page=${pageNo}&name=${searchedName}&domain=${searchedDomain}&gender=${searchedGender}&available=${searchedAvailable}`;
+    const apiUrl = `${serverUrl}/api/users?page=${pageNo}&name=${searchedName}&domain=${searchedDomain}&gender=${searchedGender}&available=${searchedAvailable}`;
 
     fetch(apiUrl)
       .then(response => response.json())
@@ -63,7 +65,7 @@ function Homepage() {
 
       )}
 
-      <PagesSection users={users} selectTeamClick={selectTeamClick} teamMembers={teamMembers} setTeamMembers={setTeamMembers} showTeams={showTeams} setShowTeams={setShowTeams} />
+      <PagesSection users={users} selectTeamClick={selectTeamClick} teamMembers={teamMembers} setTeamMembers={setTeamMembers} showTeams={showTeams} setShowTeams={setShowTeams} setSelectTeamClick={setSelectTeamClick} serverUrl={serverUrl} />
 
 
 

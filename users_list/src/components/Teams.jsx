@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Users from './Users'
 
-function Teams() {
+function Teams({serverUrl}) {
 
   const [teamData, setTeamData] = useState([])
   const [id, setId] = useState(1)
@@ -14,7 +14,7 @@ function Teams() {
   
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`https://server9user.onrender.com/api/team/${id}`);
+      const response = await fetch(`${serverUrl}/api/team/${id}`);
       if (response.ok) {
         const data = await response.json();
         console.log(data)
