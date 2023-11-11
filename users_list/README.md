@@ -1,6 +1,6 @@
 # Live Website
 
-https://mern-projects-omega.vercel.app/
+https://users-and-teams.vercel.app/
 
 ## Description
 
