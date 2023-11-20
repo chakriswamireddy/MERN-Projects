@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  
+  /* background: linear-gradient(135deg, 
+  #539cea 0%,#76a8d6 17%,#6199c7 50%,
+  #3a84c3 51%,#419ad6 59%,#4bb8f0 71%,
+  #3a8bc2 84%,#26558b 100%); */
+
+
+  background: #a7b0b7;
+  background-repeat: no-repeat;
+
+}
+
+#homepage {
+  background: linear-gradient(135deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
+  width: 40%;
+  margin: 0 auto;
+  min-width: 390px;
+  /* max-width: 400px; */
+  /* padding-top: 10px; */
+  margin-top: 40px;
+  font-family: 'Jost', sans-serif;
+}
+
+#switch-section {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-evenly;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Jost', sans-serif;
+
+  width: 70%;
+  margin: 0 auto;
+  min-width: 430px  ;
+  max-width: 700px;
+
+
+  /* min-width: 400px;
+  max-width: 600px; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(135deg, 
+  #539cea 0%,#76a8d6 17%,#6199c7 50%,
+  #3a84c3 51%,#419ad6 59%,#4bb8f0 71%,
+  #3a8bc2 84%,#26558b 100%);
+  /* min-width: 500px; */
+}
+
+#login-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+marquee {
+  font-size: 13px;
+  color: rgb(238, 44, 44);
+  
+}
+
+
+
+
+.form > h2 {
+  margin: 40px auto;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #cedbe9;
+}
+
+.form > div {
+  /* background: #b41b1b; */
+  
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form >  div> input {
+  padding: 13px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background:  #b3d0ef;
+  padding-left: 10px;
+  width: 92%;
+  
+  text-align: center;
+  
+}
+
+.form >  div:nth-of-type(2) > input {
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+
+.form >  div:nth-of-type(odd)  > span {
+  position: absolute;
+  left: 1px;
+  inset: 10 auto auto 0;
+  background: #f7f5f5;
+  border-radius: 50%;
+  font-size: 25px;
+  padding: 13px;
+  color:  #5ba7f7;
+}
+
+.form >  div:nth-of-type(even)  > span {
+  position: absolute;
+  right: 0;
+  inset: 10 auto auto 0;
+  background: #f7f5f5;
+  border-radius: 50%;
+  font-size: 25px;
+  padding: 13px 14px;
+  color:  #5ba7f7;
+}
+
+.form button {
+  width: 97%;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #3a8bc2 ;
+  text-shadow: 1px 1px 1px #b8d1ed;
+  cursor: pointer;
+
+}
+
+
+#sign ~ label {
+  cursor: pointer;
+  /* padding: 5px 30px; */
+  width: 200px;
+  text-align: center;
+  height: 30px;
+  color:  #27588b;
+  
+}
+
+#sign:checked ~ label:first-of-type {
+  border-top: 3px solid rgb(6, 65, 125);
+  background: #cedbe9;
+  background: linear-gradient(to bottom, #cedbe9, #dfe5ee );
+
+  
+  
+}
+
+#sign:not(:checked) ~ label:last-of-type {
+  /* background: rgb(62, 62, 4); */
+  border-top: 3px solid rgb(6, 65, 125);
+  background: #cedbe9;
+
+}
+
+#sign {
+  display: none;
+}

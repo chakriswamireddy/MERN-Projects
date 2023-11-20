@@ -32,9 +32,7 @@ function DomainsList({setSearchedDomain}) {
         <option value="UI Designing">UI Designing</option>
         <option value="Management">Management</option>
         <option value="Business Development">Business Development</option>
-        {/* <option value=""></option>
-        <option value=""></option>
-        <option value=""></option> */}
+
 
       </select>
     </div>
