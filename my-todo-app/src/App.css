@@ -1,0 +1,227 @@
+body {
+  /* background: rgb(120, 164, 50);
+  background: rgb(232,227,14); */
+  background: linear-gradient(128deg, rgba(232,227,14,0.9940768543745623) 0%, rgba(143,212,120,1) 43%, rgba(231,226,194,1) 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+
+
+.input-section  input {
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+  
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.input-section > div {
+  background: #000;
+  width: 50%;
+  position: relative; 
+}
+
+.input-section > div > button {
+  position: absolute;
+  right: -40px;
+  top: 5px; 
+  padding: 5px 20px;
+  background: rgb(4, 187, 28);
+  border: 2px solid rgb(4, 187, 28);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.input-section > div > button:active {
+  transform: scale(105%);
+}
+
+.input-section > h3 {
+
+  text-transform: capitalize;
+}
+
+.App h1 {
+  text-align: center;
+  }
+
+/* todo list styling */
+
+ ul  {
+
+  list-style-type: none;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+  width: 100vw;
+  margin-left: 0;
+  padding-left: 5px;
+
+}
+
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+
+  margin: 10px auto;
+  width: 80vw;
+  max-width: 600px;
+  min-width: 300px;
+  border-radius: 20px;
+  background: #91e050;
+  
+}
+
+.todo-item:active {
+  background:  rgba(74, 121, 4, 0.994);
+}
+
+.todo-item > div:first-child {
+  /* align-self: flex-end;
+  display: flex;
+  width: 10%; */
+  text-align: right;
+  display: flex;
+  align-self: self-end;
+  gap: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+
+.todo-item  span, .todo-item input {
+  cursor: pointer;
+
+}
+
+.todo-item > div > span:last-child:hover  {
+  color: red;
+}
+
+.todo-item > div > span:nth-child(2):hover  {
+  color: rgb(10, 112, 247);
+}
+
+
+.todo-item > div:last-child {
+  border-top: 1px solid black;
+
+  font-size: 18px;
+  padding: 10px 0;
+  padding-left: 5%;
+  text-transform: capitalize ;
+  
+
+  
+}
+
+.todo-body > div:first-child > span:first-child {
+  margin-right: 10px;
+  font-weight: 600;
+}
+.todo-body > div:first-child > span:last-child {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.striked-text {
+  text-decoration: line-through;
+}
+
+
+
+
+/* checkbox design */
+
+.checkbox-wrapper .ikxBAC {
+  appearance: none;
+  background-color: rgba(115, 113, 4, 0.994);
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
+}
+
+.checkbox-wrapper .ikxBAC::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+
+.checkbox-wrapper .ikxBAC,
+.checkbox-wrapper .ikxBAC::after {
+  transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper .ikxBAC::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.checkbox-wrapper input[type=checkbox] {
+  cursor: default;
+}
+
+.checkbox-wrapper .ikxBAC:hover {
+  background-color: rgba(159, 157, 3, 0.994);
+  transition-duration: 0s;
+}
+
+.checkbox-wrapper .ikxBAC:checked {
+  background-color:  rgba(232,227,14,0.9940768543745623);
+}
+
+.checkbox-wrapper .ikxBAC:checked::after {
+  background-color: #fff;
+  left: 13px;
+}
+
+.checkbox-wrapper :focus:not(.focus-visible) {
+  outline: 0;
+}
+
+.checkbox-wrapper .ikxBAC:checked:hover {
+  background-color:  rgba(155, 153, 4, 0.994);
+}
+
+
+.todo-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.todo-time {
+
+  font-size: 13px;
+
+  justify-self: flex-end;
+  margin-right: 15px;
+}
