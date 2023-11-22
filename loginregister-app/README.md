@@ -1,6 +1,6 @@
 ## Live Website
 
-https://655b321d43f25969e055efa4--magenta-lollipop-eec8c4.netlify.app/register
+https://655b321d43f25969e055efa4--magenta-lollipop-eec8c4.netlify.app/
 
 ## Description
 
