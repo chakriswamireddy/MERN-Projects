@@ -24,7 +24,7 @@ function Homepage() {
   const users = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
 
-  const serverUrl = 'https://server12user.onrender.com';
+  const serverUrl = 'https://server13user.onrender.com';
 
   useEffect(() => {
     const apiUrl = `${serverUrl}/api/users?page=${pageNo}&name=${searchedName}&domain=${searchedDomain}&gender=${searchedGender}&available=${searchedAvailable}`;
